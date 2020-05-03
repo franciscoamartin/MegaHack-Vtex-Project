@@ -4,17 +4,15 @@ import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import SideBar from "./Components/Sidebar";
 import Topbar from "./Components/TopBar";
+import Routes from "./routes";
 
 function App() {
   return (
-    <>
-      <div className="App">
-        <BrowserRouter>
-          <Topbar />
-          <SideBar />
-        </BrowserRouter>
-      </div>
-    </>
+    <BrowserRouter>
+      <Topbar />
+      <SideBar />
+      <Routes />
+    </BrowserRouter>
   );
 }
 
