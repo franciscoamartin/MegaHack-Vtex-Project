@@ -1,0 +1,20 @@
+.Toolbar {
+  visibility: visible;
+  background: #4ad5ff no-repeat padding-box;
+  opacity: 1;
+}
+.Logos {
+  visibility: visible;
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin: 8px;
+}
+.NomeUsuario {
+  font-size: 20px;
+  float: left;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.InfoUser {
+  margin-left: auto;
+}
