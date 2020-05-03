@@ -1,57 +1,75 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import { Button } from "@material-ui/core";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    minWidth: 275,
+    display: "flex",
+    width: "100%",
+    borderRadius: "8px",
+    margin: "40px",
   },
-  bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)",
+  details: {
+    display: "flex",
+    width: "100%",
+    height: "100px",
+    border: "1px",
   },
-  title: {
-    fontSize: 14,
+  buttonLogout: {
+    marginRight: "auto",
   },
-  pos: {
-    marginBottom: 12,
+  nameChat: {
+    float: "left",
   },
-});
+  chat: {
+    display: "flex",
+    width: "100%",
+    height: "100px",
+    border: "1px",
+  },
+  content: {
+    flex: "1 0 auto",
+  },
+  cover: {
+    width: "auto",
+  },
+}));
 
-export default function CardPerfil() {
+export default function MediaControlCard() {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card className={classes.root}>
-      <CardContent>
-        <Typography
-          className={classes.title}
-          color="textSecondary"
-          gutterBottom
-        >
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="h2">
-          be{bull}nev{bull}o{bull}lent
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography>
-        <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+      <div>
+        <div className={classes.details}>
+          <CardContent className={classes.content}>
+            <Typography component="h5" variant="h5">
+              Atendimento
+            </Typography>
+          </CardContent>
+          <CardContent className={classes.buttonLogout}>
+            <Button variant="contained" color="secondary">
+              DESCONECTAR
+            </Button>
+          </CardContent>
+        </div>
+
+        <div className={classes.chat}>
+          <CardContent className={classes.content}>
+            <Typography component="h5" variant="h5">
+              Marcelo
+            </Typography>
+          </CardContent>
+          <CardContent className={classes.nameChat}>
+            <Typography component="h5" variant="h5">
+              Marcelo Silva
+            </Typography>
+          </CardContent>
+        </div>
+      </div>
     </Card>
   );
 }
