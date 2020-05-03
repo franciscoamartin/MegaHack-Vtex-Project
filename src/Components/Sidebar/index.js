@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import clsx from "clsx";
 import {
   Drawer,
@@ -21,8 +21,12 @@ export default function MiniDrawer() {
   };
 
   const handleDrawerClose = () => {
-    setOpen(false);
+    setOpen(true);
   };
+
+  useEffect(() => {
+    setOpen(true);
+  }, [])
 
   return (
     <div className="containerSideBar">
