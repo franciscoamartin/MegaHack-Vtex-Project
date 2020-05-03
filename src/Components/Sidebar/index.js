@@ -10,6 +10,11 @@ import {
 import { Link } from "react-router-dom";
 import HomeIcon from "@material-ui/icons/Home";
 import PersonIcon from "@material-ui/icons/Person";
+import StarIcon from "@material-ui/icons/Star";
+import LoyaltyIcon from "@material-ui/icons/Loyalty";
+import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
+import FlagIcon from "@material-ui/icons/Flag";
+import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import { useStyles } from "./styles";
 
 export default function MiniDrawer() {
@@ -43,37 +48,37 @@ export default function MiniDrawer() {
           <List onMouseOver={handleDrawerOpen} onMouseOut={handleDrawerClose}>
             <ListItem button component={Link} to="/atendimento">
               <ListItemIcon>
-                <HomeIcon />
+                <PersonIcon />
               </ListItemIcon>
               <ListItemText>Atendimento</ListItemText>
             </ListItem>
             <ListItem button component={Link} to="/avaliacoes">
               <ListItemIcon>
-                <PersonIcon />
+                <StarIcon />
               </ListItemIcon>
               <ListItemText>Avaliação</ListItemText>
             </ListItem>
             <ListItem button component={Link} to="/vendas">
               <ListItemIcon>
-                <PersonIcon />
+                <LoyaltyIcon />
               </ListItemIcon>
               <ListItemText>Vendas</ListItemText>
             </ListItem>
             <ListItem button component={Link} to="/treinamentos">
               <ListItemIcon>
-                <PersonIcon />
+                <FitnessCenterIcon />
               </ListItemIcon>
               <ListItemText>Treinamentos</ListItemText>
             </ListItem>
             <ListItem button component={Link} to="/destaques">
               <ListItemIcon>
-                <PersonIcon />
+                <FlagIcon />
               </ListItemIcon>
               <ListItemText>Destaques</ListItemText>
             </ListItem>
             <ListItem button component={Link} to="/comissoes">
               <ListItemIcon>
-                <PersonIcon />
+                <AttachMoneyIcon />
               </ListItemIcon>
               <ListItemText>Comissões</ListItemText>
             </ListItem>
