@@ -31,7 +31,7 @@ export default function MiniDrawer() {
 
   useEffect(() => {
     setOpen(true);
-  }, [])
+  }, []);
 
   return (
     <div className="containerSideBar">
