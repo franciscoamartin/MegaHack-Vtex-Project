@@ -4,6 +4,11 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { Button } from "@material-ui/core";
+import CardHeader from "@material-ui/core/CardHeader";
+import Avatar from "@material-ui/core/Avatar";
+import IconButton from "@material-ui/core/IconButton";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
+import "./style.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonLogout: {
     marginRight: "auto",
+    marginLeft: "600px",
   },
   nameChat: {
     float: "left",
@@ -56,18 +62,41 @@ export default function MediaControlCard() {
             </Button>
           </CardContent>
         </div>
-
-        <div className={classes.chat}>
-          <CardContent className={classes.content}>
-            <Typography component="h5" variant="h5">
-              Marcelo
-            </Typography>
-          </CardContent>
-          <CardContent className={classes.nameChat}>
-            <Typography component="h5" variant="h5">
-              Marcelo Silva
-            </Typography>
-          </CardContent>
+        <hr />
+        <div>
+          <div className="left-chat">
+            <CardHeader
+              avatar={
+                <Avatar aria-label="recipe" className={classes.avatar}>
+                  R
+                </Avatar>
+              }
+              title="Marcelo dos Santos"
+              subheader="Olá, tudo bem? Gostaria..."
+            />
+            <hr />
+            <CardHeader
+              avatar={
+                <Avatar aria-label="recipe" className={classes.avatar}>
+                  R
+                </Avatar>
+              }
+              title="Marcos Vitor"
+              subheader="Olá, gostaria de ajuda em ..."
+            />
+            <hr />
+          </div>
+          <div className="right-chat">
+          <CardHeader
+              avatar={
+                <Avatar aria-label="recipe" className={classes.avatar}>
+                  R
+                </Avatar>
+              }
+              title="Marcos Vitor"
+              subheader="Olá, gostaria de ajuda em um produto."
+            />
+          </div>
         </div>
       </div>
     </Card>
