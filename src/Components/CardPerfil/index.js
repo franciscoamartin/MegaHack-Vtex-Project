@@ -8,6 +8,10 @@ import CardHeader from "@material-ui/core/CardHeader";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import CardActions from "@material-ui/core/CardActions";
+import Input from "@material-ui/core/Input";
+import MicNoneIcon from "@material-ui/icons/MicNone";
+
 import "./style.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -30,6 +34,25 @@ const useStyles = makeStyles((theme) => ({
   nameChat: {
     float: "left",
   },
+  chatConversation: {
+    marginTop: "40px",
+    marginRight: "100px",
+    marginLeft: "100px",
+    backgroundColor: "#8E79D9",
+    borderRadius: "10px",
+    float: "right",
+  },
+  chatConversationClient: {
+    marginTop: "40px",
+    marginRight: "100px",
+    marginLeft: "100px",
+    backgroundColor: "#4945B5",
+    borderRadius: "10px",
+    float: "left",
+  },
+  title: {
+    fontSize: 14,
+  },
   chat: {
     display: "flex",
     width: "100%",
@@ -49,7 +72,7 @@ export default function MediaControlCard() {
 
   return (
     <Card className={classes.root}>
-      <div>
+      <div className="container-chat">
         <div className={classes.details}>
           <CardContent className={classes.content}>
             <Typography component="h5" variant="h5">
@@ -87,14 +110,58 @@ export default function MediaControlCard() {
             <hr />
           </div>
           <div className="right-chat">
-          <CardHeader
+            <CardHeader
               avatar={
                 <Avatar aria-label="recipe" className={classes.avatar}>
                   R
                 </Avatar>
               }
               title="Marcos Vitor"
-              subheader="Olá, gostaria de ajuda em um produto."
+            />
+            <Button className="btn-sugest" variant="contained" color="primary">
+              Sugerir
+            </Button>
+            <hr />
+            <Card className={classes.chatConversation} variant="outlined">
+              <CardContent>
+                <Typography
+                  className={classes.title}
+                  color="textSecondary"
+                  gutterBottom
+                >
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card className={classes.chatConversationClient} variant="outlined">
+              <CardContent>
+                <Typography
+                  className={classes.title}
+                  color="textSecondary"
+                  gutterBottom
+                >
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card className={classes.chatConversationClient} variant="outlined">
+              <CardContent>
+                <Typography
+                  className={classes.title}
+                  color="textSecondary"
+                  gutterBottom
+                >
+                  Lorem Ipsum is simply dummy text
+                </Typography>
+              </CardContent>
+            </Card>
+            <Input
+              className="inputTextMessage"
+              placeholder="Digite sua mensagem aqui"
+              inputProps={{ "aria-label": "description" }}
+              startIcon={<MicNoneIcon />}
             />
           </div>
         </div>
