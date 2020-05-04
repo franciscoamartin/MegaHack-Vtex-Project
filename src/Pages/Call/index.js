@@ -9,11 +9,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <BrowserRouter>
-          <Topbar />
           <CardPerfil />
-          <SideBar />
-        </BrowserRouter>
       </div>
     </>
   );
